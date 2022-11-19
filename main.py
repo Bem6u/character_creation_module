@@ -1,7 +1,7 @@
 from random import randint
 
 
-def attack(char_name, char_class):
+def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон противнику равный'
                 f'{5 + randint(3, 5)}')
@@ -59,7 +59,7 @@ def start_training(char_name, char_class):
     return 'Тренировка окончена.'
 
 
-def choice_char_class():
+def choice_char_class() -> str:
     approve_choice = None
     char_class = None
     while approve_choice != 'y':
@@ -81,7 +81,7 @@ def choice_char_class():
     return char_class
 
 
-def main():
+def main() -> str:
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
     char_name = input('...назови себя: ')
